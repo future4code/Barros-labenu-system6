@@ -16,7 +16,6 @@ const createTables = () =>
   connection
     .raw(`
 
-   DROP table Teacher_specialty,LabenuSystem_specialty, LabenuSystem_teacher, Hobbies_student, LabenuSystem_student,LabenuSystem_hobbies,LabenuSystem_gang;
 
    CREATE TABLE IF NOT EXISTS LabenuSystem_gang(
       id VARCHAR(255) PRIMARY KEY,
