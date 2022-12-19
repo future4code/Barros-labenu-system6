@@ -15,10 +15,9 @@ const printError = (error: any) => {
 const createTables = () =>
   connection
     .raw(`
+    drop table if exists Teacher_specialty,LabenuSystem_specialty, LabenuSystem_teacher, Hobbies_student, LabenuSystem_student,LabenuSystem_hobbies,LabenuSystem_gang;
 
-   DROP table Teacher_specialty,LabenuSystem_specialty, LabenuSystem_teacher, Hobbies_student, LabenuSystem_student,LabenuSystem_hobbies,LabenuSystem_gang;
-
-   CREATE TABLE IF NOT EXISTS LabenuSystem_gang(
+    CREATE TABLE IF NOT EXISTS LabenuSystem_gang(
       id VARCHAR(255) PRIMARY KEY,
       name VARCHAR(255) NOT NULL,
       modulo VARCHAR(255) NOT NULL DEFAULT 0
