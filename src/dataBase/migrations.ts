@@ -17,7 +17,7 @@ const createTables = () =>
     .raw(`
 
 
-   CREATE TABLE IF NOT EXISTS LabenuSystem_gang(
+    CREATE TABLE IF NOT EXISTS LabenuSystem_gang(
       id VARCHAR(255) PRIMARY KEY,
       name VARCHAR(255) NOT NULL,
       modulo VARCHAR(255) NOT NULL DEFAULT 0
