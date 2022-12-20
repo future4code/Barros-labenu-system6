@@ -4,7 +4,7 @@ export class People{
        protected id:string,
        protected name:string, 
        protected email:string,
-       protected data_nasc: Date,
+       protected data_nasc: string,
        protected gang_id:string
     ){
         this.id=id,

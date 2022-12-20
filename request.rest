@@ -1,0 +1,10 @@
+POST http://localhost:3003/studant
+Content-Type: application/json
+
+{   
+    "name":"Dany",
+    "email": "danylinda@gmail.com",
+    "data_nasc":"20/09/1983", 
+    "gang_id":"1"
+   
+}

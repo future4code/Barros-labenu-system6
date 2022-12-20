@@ -7,3 +7,9 @@ export enum Modulo {
     "Cinco" = 5,
     "Seis" = 6,
 }
+
+
+export type hobbies= {
+    id:string,
+    name:string
+}
