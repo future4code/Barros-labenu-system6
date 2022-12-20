@@ -1,3 +1,4 @@
+import { hobbies } from "../modelos/types";
 import { People } from "./People";
 
 export class Students extends People{
@@ -5,9 +6,9 @@ export class Students extends People{
         id:string,
         name:string,
         email:string,
-        data_nasc:Date,
+        data_nasc:string,
         gang_id:string,
-       private hobbies:string[]
+       private hobbies:hobbies[]
     ){
         super(id,name,email,data_nasc,gang_id)
         this.hobbies = hobbies;
@@ -40,13 +41,13 @@ export class Students extends People{
     public setEmail(email:string){
         this.email = email
     }
-    public setNasc(nasc:Date){
+    public setNasc(nasc:string){
         this.data_nasc = nasc
     }
     public setGangId(gang:string){
         this.gang_id = gang
     }
-    public setHobbies(hobbies:string[]){
+    public setHobbies(hobbies:hobbies[]){
         this.hobbies = hobbies
     }
 }
