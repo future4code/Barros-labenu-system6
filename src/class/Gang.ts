@@ -17,38 +17,38 @@ export class Gang {
 
    public getGangId(){
       return this.gang_id;
-  }
+    }
   public getGangName(){
       return this.gang_name;
-  }
+    }
   public getTeachersId(){
       return this.teachers_id
-  }
+    }
   public getStudentsId(){
       return this.students_id
-  }
+    }
   public getGang_id(){
       return this.gang_id
-  }
+    }
   public getModuloAtual(){
       return this.modulo_atual;
-  }
+    }
 
   public setGangId(gang: string){
       this.gang_id = gang
-   }
+    }
    public setGangName(gang_name: string){
       this.gang_name = gang_name
-   }
+    }
    public setTeachersId(teachers_id: string[]){
       this.teachers_id = teachers_id
-   }
+    }
    public setStudentsId(students_id: string[]){
       this.students_id = students_id
-   }
+    }
    public setModuloAtual(modulo_atual: Modulo.Zero){
       this.modulo_atual = modulo_atual
-   }
+    }
    
 }
 
