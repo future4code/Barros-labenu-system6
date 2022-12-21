@@ -2,6 +2,8 @@ import express from 'express'
 import cors from 'cors'
 import dotenv from 'dotenv'
 import { createStudants } from './endpoints/createStudants'
+import { createTeacher } from './endpoints/createTeacher'
+import { ping } from './endpoints/ping'
 
 
 
@@ -15,4 +17,6 @@ app.listen(process.env.PORT || 3003, () => {
   console.log(`Servidor rodando na porta ${process.env.PORT || 3003}`)
 })
 
+app.get("/ping", ping)
 app.post("/studant", createStudants);
+app.post("/teacher", createTeacher);

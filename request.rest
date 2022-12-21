@@ -1,3 +1,8 @@
+### Endpoint de teste
+GET http://localhost:3003/ping
+
+###
+
 POST http://localhost:3003/studant
 Content-Type: application/json
 
@@ -7,4 +12,16 @@ Content-Type: application/json
     "data_nasc":"20/09/1983", 
     "gang_id":"1"
    
+}
+
+###
+
+POST http://localhost:3003/teacher
+Content-Type: application/json
+
+{   
+    "name":"Junior",
+    "email": "junior@labenu.com",
+    "data_nasc":"05/07/1988", 
+    "gang_id":"1",
 }
