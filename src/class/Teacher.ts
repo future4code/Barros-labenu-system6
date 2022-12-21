@@ -1,3 +1,4 @@
+import { speciality } from "../modelos/types";
 import { People } from "./People";
 
 export class Teacher extends People{
@@ -5,9 +6,9 @@ export class Teacher extends People{
         id:string,
         name:string,
         email:string,
-        data_nasc:Date,
+        data_nasc:string,
         gang_id:string,
-        private specialty_id:string,
+        private specialty_id:speciality[],
     ){
         super(id, name, email, data_nasc,gang_id)
         this.specialty_id = specialty_id;
@@ -39,13 +40,13 @@ export class Teacher extends People{
     public setEmail(email:string){
         this.email = email
     }
-    public setNasc(nasc:Date){
+    public setNasc(nasc:string){
         this.data_nasc = nasc
     }
     public setGangId(gang:string){
         this.gang_id = gang
     }
-    public setSpecialty(specialty_id:string){
+    public setSpecialty(specialty_id:speciality[]){
         this.specialty_id = specialty_id
     }
 
