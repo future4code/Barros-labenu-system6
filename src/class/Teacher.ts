@@ -5,7 +5,7 @@ export class Teacher extends People{
         id:string,
         name:string,
         email:string,
-        data_nasc:Date,
+        data_nasc:string,
         gang_id:string,
         private specialty_id:string,
     ){
@@ -39,7 +39,7 @@ export class Teacher extends People{
     public setEmail(email:string){
         this.email = email
     }
-    public setNasc(nasc:Date){
+    public setNasc(nasc:string){
         this.data_nasc = nasc
     }
     public setGangId(gang:string){

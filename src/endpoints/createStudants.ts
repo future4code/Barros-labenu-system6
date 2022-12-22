@@ -16,9 +16,38 @@ export const createStudants = async( req: Request, res: Response) => {
        /*  if(!name || !email || !data_nasc || !gang_id || hobbies.length === 0){
             throw new Error("Body Inválido.")
         } */
+        hobbies.map((hobbies) =>{
+            hobbies.id = id
+        });
+        
+        const arrayHabbies = await connection("LabenuSystem_hobbies").select()
+        
+        //console.log(arrayHabbies);
+        
+
+       /*  for (let i = 0; i < arrayHabbies.length; i++) {
+            const element = arrayHabbies[i].name;
+            console.log(element);
+            
+        } */
         const formatDate:string = dateFormat(data_nasc)
                
         const newStudant = new Students(id, name, email, formatDate, gang_id, hobbies)
+        
+        for (let i = 0; i < hobbies.length; i++) {
+            const element = hobbies[i].name;
+            const nameExist = arrayHabbies.findIndex((item)=>{
+                return item.name.toLowerCase() === element.toLowerCase()
+            })
+            if(nameExist!=1){
+                await connection("LabenuSystem_hobbies").insert({
+                    id: Date.now().toString(),
+                    name: element
+                })                
+            }
+                                    
+        }
+        
      
         await connection(TABELA_NAME).insert({
             id: newStudant.getId(),
