@@ -6,7 +6,7 @@ export class Gang {
     private gang_name: string,
     private teachers_id: string[],
     private students_id: string[],
-    private modulo_atual: Modulo.Zero
+    private modulo_atual: string
    ){
     this.gang_id = gang_id;
     this.gang_name = gang_name;
@@ -46,7 +46,7 @@ export class Gang {
    public setStudentsId(students_id: string[]){
       this.students_id = students_id
     }
-   public setModuloAtual(modulo_atual: Modulo.Zero){
+   public setModuloAtual(modulo_atual: string){
       this.modulo_atual = modulo_atual
     }
    

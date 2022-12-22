@@ -8,7 +8,7 @@ export class Students extends People{
         email:string,
         data_nasc:string,
         gang_id:string,
-       private hobbies:hobbies[]
+       private hobbies:string[]
     ){
         super(id,name,email,data_nasc,gang_id)
         this.hobbies = hobbies;
@@ -47,7 +47,7 @@ export class Students extends People{
     public setGangId(gang:string){
         this.gang_id = gang
     }
-    public setHobbies(hobbies:hobbies[]){
+    public setHobbies(hobbies:string[]){
         this.hobbies = hobbies
     }
 }
