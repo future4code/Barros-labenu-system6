@@ -9,7 +9,7 @@ export class Gang {
     private modulo_atual: Modulo.Zero
    ){
     this.gang_id = gang_id;
-    this.gang_name =gang_name;
+    this.gang_name = gang_name;
     this.teachers_id = teachers_id;
     this.students_id = students_id;
     this.modulo_atual = modulo_atual;
