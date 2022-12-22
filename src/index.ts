@@ -4,6 +4,7 @@ import dotenv from 'dotenv'
 import { createStudants } from './endpoints/createStudants'
 import { createTeacher } from './endpoints/createTeacher'
 import { ping } from './endpoints/ping'
+import { createGang } from './endpoints/createGang'
 
 
 
@@ -20,3 +21,5 @@ app.listen(process.env.PORT || 3003, () => {
 app.get("/ping", ping)
 app.post("/studant", createStudants);
 app.post("/teacher", createTeacher);
+app.post("/gang", createGang);
+
