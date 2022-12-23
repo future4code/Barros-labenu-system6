@@ -8,17 +8,16 @@ export const createGang = async( req: Request, res: Response) => {
     let errCode = 400
 
     try {
-        const {id, gang_id, gang_name, teacher_id, student_id, modulo_atual} = req.body
+        const {gang_name, teacher_id, student_id, modulo_atual} = req.body
+        let gang_id = Date.now().toString()
 
-        const newGang = new Gang(id, gang_id, gang_name, teacher_id, student_id, modulo_atual)
-
+        const newGang = new Gang(gang_id, gang_name, teacher_id, student_id, modulo_atual)
+        console.log(newGang);
+        
         await connection(TABELA_NAME).insert({
-            id: newGang.getId(),
+            id: newGang.getGang_id(),
             name: newGang.getGangName(),
-            teacher_id: newGang.getTeachersId(),
-            gang_id: newGang.getGang_id(),
-            student_id: newGang.getStudentId(),
-            modulo_atual: newGang.getModuloAtual()
+            modulo: newGang.getModuloAtual()
         }) 
 
         res.status(200).send({menssage:"Turma Criada!", Gang: newGang})

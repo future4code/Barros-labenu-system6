@@ -26,3 +26,13 @@ Content-Type: application/json
     "data_nasc":"05/07/1988", 
     "gang_id":"1",
 }
+
+###
+
+POST http://localhost:3003/gang
+Content-Type: application/json
+
+{
+    "gang_name": "Turma Barros",
+    "modulo_atual": "1"
+}
