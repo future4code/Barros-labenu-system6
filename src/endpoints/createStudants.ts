@@ -13,11 +13,7 @@ export const createStudants = async( req: Request, res: Response) => {
         const hobbies: string[] = req.body.hobbies
         let id = Date.now().toString()
         
-        const dateHabbies = await connection("LabenuSystem_hobbies").select()
-        const dateHabbiesStudant = await connection("Hobbies_student").select()
-
-        console.log(dateHabbiesStudant);
-        
+        let dateHobbies = await connection("LabenuSystem_hobbies").select()
         
         const formatDate:string = dateFormat(data_nasc)
                
@@ -31,31 +27,40 @@ export const createStudants = async( req: Request, res: Response) => {
             gang_id: newStudant.getGang_id()
         })
 
-        const arrayHabbies:hobbies[] = []
+        const arrayHobbies:hobbies[] = []
         for (let i = 0; i < hobbies.length; i++) {
             const element = hobbies[i];
-            arrayHabbies.push({id: Date.now().toString() , name:element})
-            const nameExistTbHobbies = dateHabbies.findIndex((item)=>{
+            arrayHobbies.push({id: Date.now().toString() , name:element})
+            const nameExistTbHobbies = dateHobbies.findIndex((item)=>{
                 return item.name.toLowerCase() === element.toLowerCase()
             })
-            console.log(nameExistTbHobbies);
-            
+                        
             if(nameExistTbHobbies === -1){
                 await connection("LabenuSystem_hobbies").insert({
-                    id: arrayHabbies[i].id,
-                    name: arrayHabbies[i].name.toLowerCase()
+                    id: arrayHobbies[i].id,
+                    name: arrayHobbies[i].name.toLowerCase()
                 })               
             }
-            if(nameExistTbHobbies != -1){
-                await connection("Hobbies_student").insert({
-                    id: Date.now().toString(),
-                    student_id: newStudant.getId(),
-                    hobby_id: dateHabbies[nameExistTbHobbies].id
-                })
-            }
-                                    
+                     
         }
-
+        
+        dateHobbies = await connection("LabenuSystem_hobbies").select()
+                
+        for (let i = 0; i < arrayHobbies.length; i++) {
+            const element = arrayHobbies[i].name;
+            const indexHobbies = dateHobbies.findIndex((item)=>{
+                return item.name.toLowerCase() === element.toLowerCase()
+            })
+            await connection("Hobbies_student").insert({
+                id: Date.now().toString(),
+                student_id: newStudant.getId(),
+                hobby_id: dateHobbies[indexHobbies].id
+            })
+            
+        }
+        
+       
+            
         res.status(200).send({menssage:"Estudante criado" , Students: newStudant})
 
     } catch (error:any) {
