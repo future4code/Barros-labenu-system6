@@ -8,10 +8,10 @@ Content-Type: application/json
 
 {   
     "name":"Dany",
-    "email": "danyela@gmail.com",
+    "email": "danyBy@gmail.com",
     "data_nasc":"20/09/1983", 
     "gang_id":"1",
-    "hobbies":["mergulhar","pescar"]
+    "hobbies":["festa","amigos"]
    
 }
 
