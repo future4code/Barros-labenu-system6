@@ -36,3 +36,12 @@ Content-Type: application/json
     "gang_name": "Turma Barros",
     "modulo_atual": "1"
 }
+
+###
+
+GET http://localhost:3003/studant
+Content-Type: application/json
+
+{
+    "name":"Dany"
+}
