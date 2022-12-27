@@ -1,16 +1,25 @@
 import { Request, Response } from "express"
-import { Students } from "../class/Studant"
 import { connection } from "../dataBase/connection"
+import { dateFormatBr } from "../functions"
 
 export const getStudants = async(req:Request, res:Response)=>{
     const TABELA_NAME = "LabenuSystem_student"
     let errCode = 400
     try {
     
-        const {name} = req.body
+        const name = req.body.name
+
+        if (!name) {
+            throw new Error("Verifique o body");
+        }
 
         const [result] = await connection.raw(`SELECT * FROM ${TABELA_NAME} WHERE name LIKE "%${name}%";`)
-                
+        
+        result.map((item:any)=>{
+            item.data_nasc = dateFormatBr(item.data_nasc.toString())
+            return result
+        })
+               
         let hobbies
                 
         for (let i = 0; i < result.length; i++) {

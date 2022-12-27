@@ -24,7 +24,7 @@ Content-Type: application/json
     "name":"Junior",
     "email": "junior@labenu.com",
     "data_nasc":"05/07/1988", 
-    "gang_id":"1",
+    "gang_id":"1"
 }
 
 ###
@@ -35,6 +35,16 @@ Content-Type: application/json
 {
     "gang_name": "Turma Barros",
     "modulo_atual": "1"
+}
+
+###
+
+PUT http://localhost:3003/students
+Content-Type: application/json
+
+{
+    "id": "1",
+    "gangid":"1672081244316"
 }
 
 ###
@@ -54,3 +64,4 @@ Content-Type: application/json
 {
     "name":"Fay"
 }
+

@@ -10,7 +10,7 @@ export const getTeacher = async(req:Request, res:Response) =>{
         let speciality
 
         for (let i = 0; i < result.length; i++) {
-            [speciality] = await connection.raw( `SELECT s.id, s.name FROM Teacher_speciality s, LabenuSystem_teacher t WHERE s.teacher_id = '${result[i].id}' AND t.id = s.speciality_id;`)
+            [speciality] = await connection.raw( `SELECT t.id, t.name FROM Teacher_specialty s, LabenuSystem_specialty t WHERE s.teacher_id = '${result[i].id}' AND t.id = s.specialty_id;`)
             result[i] = ({...result[i], speciality:speciality})
         } 
         res.status(200).send({result})

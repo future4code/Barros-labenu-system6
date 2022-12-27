@@ -7,6 +7,7 @@ import { ping } from './endpoints/ping'
 import { createGang } from './endpoints/createGang'
 import { getStudants } from './endpoints/getStudants'
 import { getTeacher } from './endpoints/getTeacher'
+import { putGangStudant } from './endpoints/putGangStudant'
 
 
 
@@ -24,6 +25,7 @@ app.get("/ping", ping)
 app.post("/studant", createStudants);
 app.post("/teacher", createTeacher);
 app.post("/gang", createGang);
+app.put("/students", putGangStudant);
 app.get("/studant", getStudants);
 app.get("/teacher", getTeacher);
 

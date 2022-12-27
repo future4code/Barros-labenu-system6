@@ -22,8 +22,8 @@ export const createTeacher = async(req: Request, res: Response ) =>{
             name: newTeacher.getName(),
             email: newTeacher.getEmail(),
             data_nasc: newTeacher.getData_nasc(),
-            gang_id: newTeacher.getGang_id(),
-            specialty: newTeacher.getSpecialty()
+            gang_id: newTeacher.getGang_id()
+            
         })
 
         res.status(200).send({menssage:"Professor criado" , Teacher: newTeacher})
