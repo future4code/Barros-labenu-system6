@@ -7,7 +7,11 @@ export const getStudants = async(req:Request, res:Response)=>{
     let errCode = 400
     try {
     
-        const {name} = req.body
+        const name = req.body.name
+
+        if (!name) {
+            throw new Error("Verifique o body");
+        }
 
         const [result] = await connection.raw(`SELECT * FROM ${TABELA_NAME} WHERE name LIKE "%${name}%";`)
         
