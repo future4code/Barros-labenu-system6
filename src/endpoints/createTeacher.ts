@@ -9,13 +9,13 @@ export const createTeacher = async(req: Request, res: Response ) =>{
 
     try{
         const { name, email, data_nasc, gang_id } = req.body
-        const specialty: speciality[] = req.body.speciality
+        const speciality: speciality[] = req.body.speciality
 
         let id = Date.now().toString()
 
         const formatDate:string = dateFormat(data_nasc)
 
-        const newTeacher = new Teacher(id, name, email, formatDate, gang_id, specialty)
+        const newTeacher = new Teacher(id, name, email, formatDate, gang_id, speciality)
 
         await connection(TABELA_NAME).insert({
             id: newTeacher.getId(),
