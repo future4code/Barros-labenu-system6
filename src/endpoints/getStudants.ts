@@ -15,6 +15,11 @@ export const getStudants = async(req:Request, res:Response)=>{
 
         const [result] = await connection.raw(`SELECT * FROM ${TABELA_NAME} WHERE name LIKE "%${name}%";`)
         
+        if(result.length === 0){
+            errCode = 404
+            throw new Error("Estudante não encontrado.");
+        }
+
         result.map((item:any)=>{
             item.data_nasc = dateFormatBr(item.data_nasc.toString())
             return result
