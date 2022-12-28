@@ -12,9 +12,14 @@ export const createStudants = async( req: Request, res: Response) => {
         const {name, email, data_nasc, gang_id} = req.body;
         const hobbies: string[] = req.body.hobbies
         let id = Date.now().toString()
-        
+
+        if(!name||!email||!data_nasc||!gang_id||hobbies.length === 0){
+            errCode = 404
+            throw new Error("Verifique os atributos no body.");
+        }
+
         let dateHobbies = await connection("LabenuSystem_hobbies").select()
-        
+                
         const formatDate:string = dateFormat(data_nasc)
                
         const newStudant = new Students(id, name, email, formatDate, gang_id, hobbies)
