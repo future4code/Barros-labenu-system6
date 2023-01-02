@@ -8,6 +8,7 @@ import { createGang } from './endpoints/createGang'
 import { getStudants } from './endpoints/getStudants'
 import { getTeacher } from './endpoints/getTeacher'
 import { putGangStudant } from './endpoints/putGangStudant'
+import { putGangTeacher } from './endpoints/putGangTeacher'
 
 
 
@@ -26,6 +27,7 @@ app.post("/studant", createStudants);
 app.post("/teacher", createTeacher);
 app.post("/gang", createGang);
 app.put("/students", putGangStudant);
+app.put("/teacher", putGangTeacher);
 app.get("/studant", getStudants);
 app.get("/teacher", getTeacher);
 
