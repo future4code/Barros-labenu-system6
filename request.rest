@@ -34,7 +34,7 @@ Content-Type: application/json
 
 {
     "gang_name": "Turma Teste15",
-    "modulo_atual": "21"
+    "modulo_atual": ""
 }
 
 ###
