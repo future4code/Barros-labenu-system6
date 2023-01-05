@@ -14,6 +14,12 @@ export const createGang = async( req: Request, res: Response) => {
         const newGang = new Gang(gang_id, gang_name, teacher_id, student_id, modulo_atual)
         console.log(newGang);
 
+        if (gang_name === ""){
+            const erro=new Error("Nome da Turma INVÁLIDA!");
+            erro.name="nameInvalido";
+            throw erro;
+        }
+
         const arrayModulo: number[] = [0, 1, 2, 3, 4, 5, 6];
         const value = arrayModulo.some(isBiggerThan6)
         
