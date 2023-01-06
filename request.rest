@@ -65,3 +65,19 @@ Content-Type: application/json
     "name":"Fay"
 }
 
+###
+
+GET http://localhost:3003/gangs
+Content-Type: application/json
+
+
+###
+
+PUT http://localhost:3003/module
+Content-Type: application/json
+
+{
+    "name": "JBL",
+    "modulo": "4"
+}
+
