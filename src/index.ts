@@ -9,6 +9,8 @@ import { getStudants } from './endpoints/getStudants'
 import { getTeacher } from './endpoints/getTeacher'
 import { putGangStudant } from './endpoints/putGangStudant'
 import { putGangTeacher } from './endpoints/putGangTeacher'
+import { getGangs } from './endpoints/getGangs'
+import { putGangModule } from './endpoints/putGangModule'
 
 
 
@@ -30,4 +32,7 @@ app.put("/students", putGangStudant);
 app.put("/teacher", putGangTeacher);
 app.get("/studant", getStudants);
 app.get("/teacher", getTeacher);
+app.get("/gangs", getGangs);
+app.put("/module", putGangModule);
+
 
