@@ -11,6 +11,7 @@ export const getStudants = async(req:Request, res:Response)=>{
 
         if (!name) {
             throw new Error("Verifique o body");
+            
         }
 
         const [result] = await connection.raw(`SELECT * FROM ${TABELA_NAME} WHERE name LIKE "%${name}%";`)

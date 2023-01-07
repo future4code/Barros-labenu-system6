@@ -8,7 +8,7 @@ Content-Type: application/json
 
 {   
     "name":"Dany",
-    "email": "danyBy@gmail.com",
+    "email": "dany@gmail.com",
     "data_nasc":"20/09/1983", 
     "gang_id":"1",
     "hobbies":["festa","amigos"]
@@ -24,7 +24,8 @@ Content-Type: application/json
     "name":"Junior",
     "email": "junior@labenu.com",
     "data_nasc":"05/07/1988", 
-    "gang_id":"1"
+    "gang_id":"1",
+    "speciality":["JAVA","SQL"]
 }
 
 ###
@@ -33,13 +34,23 @@ POST http://localhost:3003/gang
 Content-Type: application/json
 
 {
-    "gang_name": "Turma Teste15",
-    "modulo_atual": ""
+    "gang_name": "JBL",
+    "modulo_atual": "5"
 }
 
 ###
 
 PUT http://localhost:3003/students
+Content-Type: application/json
+
+{
+    "id": "1",
+    "gangid":"1672081244316"
+}
+
+###
+
+PUT http://localhost:3003/teacher
 Content-Type: application/json
 
 {
@@ -62,7 +73,7 @@ GET http://localhost:3003/teacher
 Content-Type: application/json
 
 {
-    "name":"Fay"
+    "name":"Junior"
 }
 
 ###
@@ -78,6 +89,6 @@ Content-Type: application/json
 
 {
     "name": "JBL",
-    "modulo": "4"
+    "modulo": "2"
 }
 

@@ -30,9 +30,9 @@ app.post("/teacher", createTeacher);
 app.post("/gang", createGang);
 app.put("/students", putGangStudant);
 app.put("/teacher", putGangTeacher);
+app.put("/module", putGangModule);
 app.get("/studant", getStudants);
 app.get("/teacher", getTeacher);
 app.get("/gangs", getGangs);
-app.put("/module", putGangModule);
 
 
