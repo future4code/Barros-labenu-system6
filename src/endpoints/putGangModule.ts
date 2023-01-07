@@ -40,8 +40,6 @@ export const putGangModule = async (req:Request, res:Response) =>{
         .update({modulo: modulo})
         .where({name: name})
 
-        console.log(nameValido);
-
         res.status(200).send({menssage:"Modulo alterado com sucesso!"})
     } catch (error:any) {
         res.status(errCode).send({menssage: error.message})

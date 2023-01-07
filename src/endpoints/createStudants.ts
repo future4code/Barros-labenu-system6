@@ -18,6 +18,14 @@ export const createStudants = async( req: Request, res: Response) => {
             throw new Error("Verifique os atributos no body.");
         }
 
+        const [result] = await connection.raw(`SELECT * FROM ${TABELA_NAME} WHERE email = "${email}";`)
+
+        if (result.length>0) {
+            errCode = 404
+            throw new Error("Email já cadastrado!");
+            
+        }
+
         let dateHobbies = await connection("LabenuSystem_hobbies").select()
                 
         const formatDate:string = dateFormat(data_nasc)

@@ -1,5 +1,3 @@
-import { Modulo } from "../modelos/types";
-
 export class Gang {
    constructor(
     private gang_id: string,

@@ -8,7 +8,7 @@ export class Teacher extends People{
         email:string,
         data_nasc:string,
         gang_id:string,
-        private specialty_id:speciality[],
+        private specialty_id:string[],
     ){
         super(id, name, email, data_nasc,gang_id)
         this.specialty_id = specialty_id;
@@ -46,7 +46,7 @@ export class Teacher extends People{
     public setGangId(gang:string){
         this.gang_id = gang
     }
-    public setSpecialty(specialty_id:speciality[]){
+    public setSpecialty(specialty_id:string[]){
         this.specialty_id = specialty_id
     }
 
