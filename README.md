@@ -5,7 +5,7 @@ Projeto desenvolvido como didática de back-end para as turmas JBL LABENU com co
 
 ##  👩🏾Pessoas Desenvolvedoras do Projeto
 
-| [<img src="https://avatars.githubusercontent.com/u/102339228?v=4" width=115><br><sub>Ricardo Barros</sub>](https://github.com/Ricardoteleco) |  [<img src="https://avatars.githubusercontent.com/u/74737156?v=4" width=115><br><sub>Byron Smith</sub>](https://github.com/byron-smith-nobrega) |  [<img src="https://avatars.githubusercontent.com/u/102320940?v=4" width=115><br><sub>Samuel Garcia</sub>](https://github.com/jessicalimaz) |
+| [<img src="https://avatars.githubusercontent.com/u/102339228?v=4" width=115><br><sub>Ricardo Barros</sub>](https://github.com/Ricardoteleco) |  [<img src="https://avatars.githubusercontent.com/u/74737156?v=4" width=115><br><sub>Byron Smith</sub>](https://github.com/byron-smith-nobrega) |  [<img src="https://avatars.githubusercontent.com/u/102320940?v=4" width=115><br><sub>Jéssica Lima</sub>](https://github.com/jessicalimaz) |
 | :---: | :---: | :---: |
 
 ## :books: Funcionalidades
