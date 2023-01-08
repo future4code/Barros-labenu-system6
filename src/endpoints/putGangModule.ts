@@ -25,6 +25,15 @@ export const putGangModule = async (req:Request, res:Response) =>{
             throw new Error("Nome da turma inválida!")
         }
 
+        const gangModulo = nameValido.findIndex((item)=>{
+            return item.modulo === modulo
+        })
+
+        if(gangModulo != -1){
+            errCode = 400
+            throw new Error("Turma já esta no modulo!")
+        }
+
         const arrayModulo: number[] = [0, 1, 2, 3, 4, 5, 6]
         if (modulo > arrayModulo[6]){
             errCode = 400
