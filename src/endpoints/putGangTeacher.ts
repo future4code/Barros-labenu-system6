@@ -24,7 +24,7 @@ export const putGangTeacher = async (req:Request, res:Response) =>{
 
         if(dataTeacher[0].gang_id === gangid){
             errCode = 409
-            throw new Error("Estudante já faz parte da turma");
+            throw new Error("Docente já faz parte da turma");
         }
                 
         const dataGang = await connection("LabenuSystem_gang")

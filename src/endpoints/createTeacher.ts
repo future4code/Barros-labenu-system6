@@ -20,7 +20,7 @@ export const createTeacher = async(req: Request, res: Response ) =>{
         
         const [result] = await connection.raw(`SELECT * FROM ${TABELA_NAME} WHERE email = "${email}";`)
         
-        if (result.length>0) {
+        if (result.length > 0) {
             errCode = 404
             throw new Error("Email já cadastrado!");
             
