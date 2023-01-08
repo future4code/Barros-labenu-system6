@@ -12,7 +12,7 @@ export const createTeacher = async(req: Request, res: Response ) =>{
         const speciality: string[] = req.body.speciality
         let id = Date.now().toString()
 
-        if(!name||!email||!data_nasc||!gang_id||speciality.length === 0){
+        if(!name||!email||!data_nasc||!gang_id||speciality){
             errCode = 404
             throw new Error("Verifique os atributos no body.");
         }
