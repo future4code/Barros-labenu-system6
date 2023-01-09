@@ -6,7 +6,7 @@ Projeto desenvolvido como didática de back-end para as turmas JBL LABENU com co
 ## Link Documentação Postman
 [Doc_Postman](https://documenter.getpostman.com/view/22363157/2s8Z75S9p9)
 
-## Link Deploy Rende
+## Link Deploy Render
 [API_LabSystem6](https://labsystem6.onrender.com)
 
 ##  👩🏾Pessoas Desenvolvedoras do Projeto
